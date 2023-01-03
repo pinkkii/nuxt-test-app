@@ -151,6 +151,11 @@ function addToCart() {
             border: none;
             text-align: center;
             font-size: 24px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
             -moz-appearance: textfield;
         }
 
