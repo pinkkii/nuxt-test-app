@@ -151,6 +151,7 @@ function addToCart() {
             border: none;
             text-align: center;
             font-size: 24px;
+            -moz-appearance: textfield;
         }
 
         .minus-btn,
