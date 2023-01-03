@@ -10,7 +10,16 @@ export const useBasketStore = defineStore('basket', {
     },
     actions: {
         incrementQuantityInBasket(quantity) {
-            this.basket.quantity = quantity;
+            if (typeof quantity === 'string') {
+                return;
+            }
+
+            if (this.basket.quantity + quantity >= 99) {
+                this.basket.quantity = 99;
+                return;
+            }
+
+            this.basket.quantity += quantity;
         }
     },
 })

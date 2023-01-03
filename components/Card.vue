@@ -36,7 +36,8 @@
                                         <img src="../assets/images/minus.svg" alt="minus-image"
                                             @click="decrementQuantity">
                                     </div>
-                                    <input v-model="productQuantity" class="input-action" type="text" min="1" max="100">
+                                    <input v-model.number="productQuantity" class="input-action" type="number" min="1"
+                                        max="100">
                                     <div class="plus-btn">
                                         <img src="../assets/images/plus.svg" alt="plus-image"
                                             @click="productQuantity += 1">
@@ -79,7 +80,7 @@ function addToCart() {
         productQuantity.value = 0;
     }
 
-    basketStore.basket.quantity += productQuantity.value;
+    basketStore.incrementQuantityInBasket(productQuantity.value);
 }
 </script>
   
@@ -154,9 +155,12 @@ function addToCart() {
 
         .minus-btn,
         .plus-btn {
-            cursor: pointer;
             transition: 0.5s;
             user-select: none;
+
+            img {
+                cursor: pointer;
+            }
 
             &:active img {
                 transform: scale(1.3);
@@ -164,11 +168,11 @@ function addToCart() {
         }
 
         .minus-btn {
-            padding-right: 21px;
+            padding-right: 4px;
         }
 
         .plus-btn {
-            padding-left: 21px;
+            padding-left: 4px;
         }
     }
 }
