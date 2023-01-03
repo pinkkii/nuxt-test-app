@@ -156,6 +156,7 @@ function addToCart() {
         .plus-btn {
             cursor: pointer;
             transition: 0.5s;
+            user-select: none;
 
             &:active img {
                 transform: scale(1.3);
