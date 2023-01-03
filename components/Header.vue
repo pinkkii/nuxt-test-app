@@ -81,6 +81,12 @@ const quantity = computed(() => basketStore.basket.quantity);
             font-size: 23px;
             line-height: 29px;
             text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+                color: $blue;
+                transform: scale(1.05);
+            }
         }
 
         .list-group-item {
