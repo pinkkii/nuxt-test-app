@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'OnestBold';
+	src: url('OnestBold1602-hint.eot');
+	src: local('☺'), url('OnestBold1602-hint.woff') format('woff'), url('OnestBold1602-hint.ttf') format('truetype'), url('OnestBold1602-hint.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OnestMedium';
+	src: url('~fonts/OnestMedium1602-hint.eot');
+	src: local('☺'), url('OnestMedium1602-hint.woff') format('woff'), url('OnestMedium1602-hint.ttf') format('truetype'), url('OnestMedium1602-hint.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OnestRegular';
+	src: url('~fonts/OnestRegular1602-hint.eot');
+	src: local('☺'), url('OnestRegular1602-hint.woff') format('woff'), url('OnestRegular1602-hint.ttf') format('truetype'), url('OnestRegular1602-hint.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
