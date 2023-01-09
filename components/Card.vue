@@ -1,17 +1,13 @@
 <template>
     <section class="card mt-5 pt-5">
         <div class="container-lg">
-            <div class="row g-0">
-                <div class="mobile-slider col-lg-6">
-                    <Slider name-id="slider-mobile" />
-                </div>
+            <div class="wrapper-card row g-0">
                 <div class="col-lg-6">
                     <div class="card-body">
                         <div class="d-flex align-items-center flex-wrap">
                             <h5 class="card-title main-title me-4">Омега-3 <i>Тріска</i></h5>
                             <h5 class="card-title main-subtitle">з вітамінами А і D3 </h5>
                         </div>
-                        <CardTabs />
                         <div class="card-info-price mt-5 pt-2">
                             <div class="card-information d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn btn-success btn-mobile" @click="addToCart">
@@ -48,8 +44,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="desktop-slider col-lg-6 text-md-end">
-                    <Slider name-id="slider-desktop" />
+                <div class="col-lg-6 text-md-end">
+                    <Slider name-id="main-slider" />
                 </div>
             </div>
         </div>
@@ -198,7 +194,6 @@ function addToCart() {
     }
 }
 
-.mobile-slider,
 .btn-mobile {
     display: none;
 }
@@ -212,12 +207,8 @@ function addToCart() {
 }
 
 @media only screen and (max-width: 991px) {
-    .desktop-slider {
-        display: none;
-    }
-
-    .mobile-slider {
-        display: block;
+    .wrapper-card {
+        flex-direction: column-reverse;
     }
 }
 
