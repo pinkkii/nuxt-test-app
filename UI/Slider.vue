@@ -32,7 +32,7 @@ const { nameId } = defineProps({
     nameId: String
 })
 
-const target = ref(`${nameId}`)
+const target = ref(`#${nameId}`)
 </script>
   
 <style lang="scss" scoped>
